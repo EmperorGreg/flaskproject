@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even stevens? Let's see</title>
+</head>
+<body>
+    <h1>Enter a random whole number:</h1>
+    <form method="post" action="{{url_for('number')}}">
+        <p>Your number:</p>
+        <p><input type="number" name="number" /></p>
+        <p><input type="submit" value="submit" /></p>
+    </form>
+</body>
+</html>
