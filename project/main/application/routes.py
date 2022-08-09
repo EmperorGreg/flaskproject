@@ -11,14 +11,19 @@ def index():
     return render_template('index.html')
 
 @app.route('/even',methods=['GET','POST'])
-def even():
-    formData = request.form.get('number')
+def even(number):
     isEven = False
-    if formData % 2 != 0:
+    if number % 2 != 0:
         return isEven
     else:
         isEven = true
         return isEven
-    
 
-return render_template('.html', formData=formData, isEven.)
+@app.route('/result')
+def result():
+    formData = request.form.get('number')
+    formData = int(formData)
+    checkEven = even(formData)
+    return render_template('result.html', formData=formData, checkEven=checkEven.text)
+
+
